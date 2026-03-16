@@ -3,12 +3,16 @@
 Cliente Java 11 minimalista para a API da **FocusNFE** (NFe, NFSe e recursos de Gestão).  
 Inclui transporte HTTP baseado no `HttpClient` do JDK, mapeamento JSON via Jackson e serviços prontos para os endpoints mais usados.
 
+[![](https://img.shields.io/badge/HyperPowered-Use%20the%20official%20repository-yellow?color=%23279BF8&cacheSeconds=3600)](https://maven.dev.hyperpowered.net/#/releases/balbucio/picpay4j/picpay4j/)
+
+
 ## Requisitos
 - Java 11 ou superior.
 - Maven 3.8+ (ou Gradle) para compilar/empacotar.
 - Um token de acesso da FocusNFE.
 
 ## Instalação
+
 ### Maven
 ```xml
 <dependency>
