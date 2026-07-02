@@ -1,12 +1,12 @@
 package balbucio.focusnfe4j;
 
+import balbucio.focusnfe4j.nfe.NfeRequest;
 import balbucio.focusnfe4j.nfe.NfeStatusResponse;
 import balbucio.focusnfe4j.testutil.TestHttpServer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 
 import java.nio.charset.StandardCharsets;
-import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -27,7 +27,8 @@ public class NfeServiceTest {
                     .token("t")
                     .build();
 
-            Map<String, Object> payload = Map.of("data", Map.of("foo", "bar"));
+            NfeRequest payload = new NfeRequest();
+            payload.setNaturezaOperacao("foo");
             NfeStatusResponse resp = client.nfe().emitir("abc", payload);
 
             assertEquals("abc", resp.getRef());
@@ -39,7 +40,7 @@ public class NfeServiceTest {
             assertTrue(req.uri.getQuery().contains("ref=abc"));
 
             ObjectMapper om = client.getObjectMapper();
-            assertEquals("bar", om.readTree(req.body).get("data").get("foo").asText());
+            assertEquals("foo", om.readTree(req.body).get("natureza_operacao").asText());
         }
     }
 }

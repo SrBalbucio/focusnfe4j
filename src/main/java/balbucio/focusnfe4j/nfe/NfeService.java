@@ -21,12 +21,12 @@ public class NfeService {
     /**
      * Emite uma NFe (assíncrono): POST /v2/nfe?ref=...
      */
-    public NfeStatusResponse emitir(String referencia, Object payload) {
+    public NfeStatusResponse emitir(String referencia, NfeRequest payload) {
         Map<String, String> q = FocusNfeClient.queryOf("ref", referencia);
         return client.sendJson("POST", "/v2/nfe", q, payload, NfeStatusResponse.class);
     }
 
-    public JsonNode emitirRaw(String referencia, Object payload) {
+    public JsonNode emitirRaw(String referencia, NfeRequest payload) {
         Map<String, String> q = FocusNfeClient.queryOf("ref", referencia);
         return client.sendJson("POST", "/v2/nfe", q, payload);
     }

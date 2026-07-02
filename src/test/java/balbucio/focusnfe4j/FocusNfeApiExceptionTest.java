@@ -1,10 +1,10 @@
 package balbucio.focusnfe4j;
 
+import balbucio.focusnfe4j.nfe.NfeRequest;
 import balbucio.focusnfe4j.testutil.TestHttpServer;
 import org.junit.jupiter.api.Test;
 
 import java.nio.charset.StandardCharsets;
-import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -25,8 +25,9 @@ public class FocusNfeApiExceptionTest {
                     .token("t")
                     .build();
 
+            NfeRequest payload = new NfeRequest();
             FocusNfeApiException ex = assertThrows(FocusNfeApiException.class,
-                    () -> client.nfe().emitir("abc", Map.of("data", Map.of())));
+                    () -> client.nfe().emitir("abc", payload));
 
             assertEquals(422, ex.getStatusCode());
             assertNotNull(ex.getError());

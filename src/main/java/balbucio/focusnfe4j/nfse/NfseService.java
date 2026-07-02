@@ -21,12 +21,12 @@ public class NfseService {
     /**
      * Emite uma NFSe: POST /v2/nfse?ref=...
      */
-    public NfseStatusResponse emitir(String referencia, Object payload) {
+    public NfseStatusResponse emitir(String referencia, NfseRequest payload) {
         Map<String, String> q = FocusNfeClient.queryOf("ref", referencia);
         return client.sendJson("POST", "/v2/nfse", q, payload, NfseStatusResponse.class);
     }
 
-    public JsonNode emitirRaw(String referencia, Object payload) {
+    public JsonNode emitirRaw(String referencia, NfseRequest payload) {
         Map<String, String> q = FocusNfeClient.queryOf("ref", referencia);
         return client.sendJson("POST", "/v2/nfse", q, payload);
     }
