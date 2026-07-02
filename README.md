@@ -48,11 +48,16 @@ FocusNfeClient client = FocusNfeClient.builder()
 
 ### Emitir NFe
 ```java
-Map<String, Object> payload = Map.of(
-        "cnpj_emitente", "12345678000190",
-        "natureza_operacao", "Venda",
-        "itens", List.of(Map.of("cfop", "5101", "valor_total", 100))
-);
+import balbucio.focusnfe4j.nfe.*;
+
+var item = new NfeItem();
+item.setCfop("5101");
+item.setValorTotal(100.0);
+
+var payload = new NfeRequest();
+payload.setCnpjEmitente("12345678000190");
+payload.setNaturezaOperacao("Venda");
+payload.setItens(List.of(item));
 
 var status = client.nfe().emitir("minha-ref-123", payload);
 System.out.println(status.getStatus()); // processando_autorizacao, autorizado etc.
@@ -72,7 +77,15 @@ client.nfe().enviarEmail("minha-ref-123", new EmailRequest(List.of("destino@exem
 
 ### NFSe
 ```java
-var nfse = client.nfse().emitir("ref-nfse-001", Map.of("servico", Map.of("valor_servicos", 150.0)));
+import balbucio.focusnfe4j.nfse.*;
+
+var servico = new Servico();
+servico.setValorServicos(150.0);
+
+var payload = new NfseRequest();
+payload.setServico(servico);
+
+var nfse = client.nfse().emitir("ref-nfse-001", payload);
 var detalhes = client.nfse().consultar("ref-nfse-001", true);
 client.nfse().cancelar("ref-nfse-001", "Solicitação do tomador");
 ```
