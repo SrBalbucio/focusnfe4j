@@ -1,6 +1,6 @@
 # focusnfe4j
 
-Cliente Java 11 minimalista para a API da **FocusNFE** (NFe, NFSe e recursos de Gestão).  
+Cliente Java 11 minimalista para a API da **[FocusNFE](https://focusnfe.com.br/)** (NFe, NFSe e recursos de Gestão).  
 Inclui transporte HTTP baseado no `HttpClient` do JDK, mapeamento JSON via Jackson e serviços prontos para os endpoints mais usados.
 
 [![](https://img.shields.io/badge/HyperPowered-Use%20the%20official%20repository-yellow?color=%23279BF8&cacheSeconds=3600)](https://maven.dev.hyperpowered.net/#/releases/balbucio/picpay4j/picpay4j/)
@@ -9,7 +9,7 @@ Inclui transporte HTTP baseado no `HttpClient` do JDK, mapeamento JSON via Jacks
 ## Requisitos
 - Java 11 ou superior.
 - Maven 3.8+ (ou Gradle) para compilar/empacotar.
-- Um token de acesso da FocusNFE.
+- Um token de acesso da [FocusNFE](https://focusnfe.com.br/).
 
 ## Instalação
 
@@ -31,6 +31,8 @@ implementation 'balbucio.focusnfe4j:focusnfe4j:1.0.0'
 ```kotlin
 implementation("balbucio.focusnfe4j:focusnfe4j:1.0.0")
 ```
+
+> Adicione o [repositório da HyperPowered](https://maven.dev.hyperpowered.net)
 
 ## Configuração rápida
 ```java
