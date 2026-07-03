@@ -1,4 +1,4 @@
-package balbucio.focusnfe4j.nfe;
+package balbucio.focusnfe4j.nfe.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -149,5 +149,111 @@ public class DocumentoImportacao {
 
     public void setAdicoes(List<Adicao> adicoes) {
         this.adicoes = adicoes;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static class Builder {
+        private String numero;
+        private String dataRegistro;
+        private String localDesembaracoAduaneiro;
+        private String ufDesembaracoAduaneiro;
+        private String dataDesembaracoAduaneiro;
+        private Integer viaTransporte;
+        private Double valorAfrmm;
+        private Integer formaIntermedio;
+        private String cnpj;
+        private String cpf;
+        private String ufTerceiro;
+        private String codigoExportador;
+        private List<Adicao> adicoes;
+
+        Builder() {
+        }
+
+        public Builder numero(String numero) {
+            this.numero = numero;
+            return this;
+        }
+
+        public Builder dataRegistro(String dataRegistro) {
+            this.dataRegistro = dataRegistro;
+            return this;
+        }
+
+        public Builder localDesembaracoAduaneiro(String localDesembaracoAduaneiro) {
+            this.localDesembaracoAduaneiro = localDesembaracoAduaneiro;
+            return this;
+        }
+
+        public Builder ufDesembaracoAduaneiro(String ufDesembaracoAduaneiro) {
+            this.ufDesembaracoAduaneiro = ufDesembaracoAduaneiro;
+            return this;
+        }
+
+        public Builder dataDesembaracoAduaneiro(String dataDesembaracoAduaneiro) {
+            this.dataDesembaracoAduaneiro = dataDesembaracoAduaneiro;
+            return this;
+        }
+
+        public Builder viaTransporte(Integer viaTransporte) {
+            this.viaTransporte = viaTransporte;
+            return this;
+        }
+
+        public Builder valorAfrmm(Double valorAfrmm) {
+            this.valorAfrmm = valorAfrmm;
+            return this;
+        }
+
+        public Builder formaIntermedio(Integer formaIntermedio) {
+            this.formaIntermedio = formaIntermedio;
+            return this;
+        }
+
+        public Builder cnpj(String cnpj) {
+            this.cnpj = cnpj;
+            return this;
+        }
+
+        public Builder cpf(String cpf) {
+            this.cpf = cpf;
+            return this;
+        }
+
+        public Builder ufTerceiro(String ufTerceiro) {
+            this.ufTerceiro = ufTerceiro;
+            return this;
+        }
+
+        public Builder codigoExportador(String codigoExportador) {
+            this.codigoExportador = codigoExportador;
+            return this;
+        }
+
+        public Builder adicoes(List<Adicao> adicoes) {
+            this.adicoes = adicoes;
+            return this;
+        }
+
+        public DocumentoImportacao build() {
+            DocumentoImportacao doc = new DocumentoImportacao();
+            doc.numero = this.numero;
+            doc.dataRegistro = this.dataRegistro;
+            doc.localDesembaracoAduaneiro = this.localDesembaracoAduaneiro;
+            doc.ufDesembaracoAduaneiro = this.ufDesembaracoAduaneiro;
+            doc.dataDesembaracoAduaneiro = this.dataDesembaracoAduaneiro;
+            doc.viaTransporte = this.viaTransporte;
+            doc.valorAfrmm = this.valorAfrmm;
+            doc.formaIntermedio = this.formaIntermedio;
+            doc.cnpj = this.cnpj;
+            doc.cpf = this.cpf;
+            doc.ufTerceiro = this.ufTerceiro;
+            doc.codigoExportador = this.codigoExportador;
+            doc.adicoes = this.adicoes;
+            return doc;
+        }
     }
 }

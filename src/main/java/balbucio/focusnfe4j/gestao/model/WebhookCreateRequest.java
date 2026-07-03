@@ -80,5 +80,62 @@ public class WebhookCreateRequest {
         this.authorizationHeader = authorizationHeader;
         return this;
     }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static class Builder {
+        private String cnpj;
+        private String cpf;
+        private String event;
+        private String url;
+        private String authorization;
+        private String authorizationHeader;
+
+        Builder() {
+        }
+
+        public Builder cnpj(String cnpj) {
+            this.cnpj = cnpj;
+            return this;
+        }
+
+        public Builder cpf(String cpf) {
+            this.cpf = cpf;
+            return this;
+        }
+
+        public Builder event(String event) {
+            this.event = event;
+            return this;
+        }
+
+        public Builder url(String url) {
+            this.url = url;
+            return this;
+        }
+
+        public Builder authorization(String authorization) {
+            this.authorization = authorization;
+            return this;
+        }
+
+        public Builder authorizationHeader(String authorizationHeader) {
+            this.authorizationHeader = authorizationHeader;
+            return this;
+        }
+
+        public WebhookCreateRequest build() {
+            WebhookCreateRequest request = new WebhookCreateRequest();
+            request.cnpj = this.cnpj;
+            request.cpf = this.cpf;
+            request.event = this.event;
+            request.url = this.url;
+            request.authorization = this.authorization;
+            request.authorizationHeader = this.authorizationHeader;
+            return request;
+        }
+    }
 }
 

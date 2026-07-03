@@ -49,20 +49,35 @@ FocusNfeClient client = FocusNfeClient.builder()
 ## Exemplos
 
 ### Emitir NFe
+
 ```java
 import balbucio.focusnfe4j.nfe.*;
+import balbucio.focusnfe4j.nfe.model.NfeItem;
+import balbucio.focusnfe4j.nfe.model.NfeRequest;
 
 var item = new NfeItem();
-item.setCfop("5101");
-item.setValorTotal(100.0);
+item.
+
+setCfop("5101");
+item.
+
+setValorTotal(100.0);
 
 var payload = new NfeRequest();
-payload.setCnpjEmitente("12345678000190");
-payload.setNaturezaOperacao("Venda");
-payload.setItens(List.of(item));
+payload.
+
+setCnpjEmitente("12345678000190");
+payload.
+
+setNaturezaOperacao("Venda");
+payload.
+
+setItens(List.of(item));
 
 var status = client.nfe().emitir("minha-ref-123", payload);
-System.out.println(status.getStatus()); // processando_autorizacao, autorizado etc.
+System.out.
+
+println(status.getStatus()); // processando_autorizacao, autorizado etc.
 ```
 
 ### Consultar NFe (completa) e baixar DANFE
@@ -78,18 +93,28 @@ client.nfe().enviarEmail("minha-ref-123", new EmailRequest(List.of("destino@exem
 ```
 
 ### NFSe
+
 ```java
-import balbucio.focusnfe4j.nfse.*;
+import balbucio.focusnfe4j.nfse.model.NfseRequest;
+import balbucio.focusnfe4j.nfse.model.Servico;
 
 var servico = new Servico();
-servico.setValorServicos(150.0);
+servico.
+
+setValorServicos(150.0);
 
 var payload = new NfseRequest();
-payload.setServico(servico);
+payload.
+
+setServico(servico);
 
 var nfse = client.nfse().emitir("ref-nfse-001", payload);
 var detalhes = client.nfse().consultar("ref-nfse-001", true);
-client.nfse().cancelar("ref-nfse-001", "Solicitação do tomador");
+client.
+
+nfse().
+
+cancelar("ref-nfse-001","Solicitação do tomador");
 ```
 
 ### Gestão: backups

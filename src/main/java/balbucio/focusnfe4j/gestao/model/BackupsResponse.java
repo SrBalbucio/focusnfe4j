@@ -13,5 +13,27 @@ public class BackupsResponse {
     public List<BackupItem> getBackups() {
         return backups;
     }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static class Builder {
+        private List<BackupItem> backups;
+
+        Builder() {
+        }
+
+        public Builder backups(List<BackupItem> backups) {
+            this.backups = backups;
+            return this;
+        }
+
+        public BackupsResponse build() {
+            BackupsResponse response = new BackupsResponse();
+            response.backups = this.backups;
+            return response;
+        }
+    }
 }
 

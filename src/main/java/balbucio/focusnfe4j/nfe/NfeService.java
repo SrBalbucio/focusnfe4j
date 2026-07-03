@@ -3,6 +3,8 @@ package balbucio.focusnfe4j.nfe;
 import balbucio.focusnfe4j.FocusNfeClient;
 import balbucio.focusnfe4j.model.CancelRequest;
 import balbucio.focusnfe4j.model.EmailRequest;
+import balbucio.focusnfe4j.nfe.model.NfeRequest;
+import balbucio.focusnfe4j.nfe.model.NfeStatusResponse;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import java.util.LinkedHashMap;

@@ -1,6 +1,6 @@
 package balbucio.focusnfe4j;
 
-import balbucio.focusnfe4j.nfe.NfeRequest;
+import balbucio.focusnfe4j.nfe.model.NfeRequest;
 import balbucio.focusnfe4j.testutil.TestHttpServer;
 import org.junit.jupiter.api.Test;
 

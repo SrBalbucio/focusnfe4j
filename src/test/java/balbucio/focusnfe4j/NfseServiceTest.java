@@ -1,6 +1,6 @@
 package balbucio.focusnfe4j;
 
-import balbucio.focusnfe4j.nfse.NfseStatusResponse;
+import balbucio.focusnfe4j.nfse.model.NfseStatusResponse;
 import balbucio.focusnfe4j.testutil.TestHttpServer;
 import org.junit.jupiter.api.Test;
 

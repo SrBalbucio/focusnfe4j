@@ -1,7 +1,7 @@
 package balbucio.focusnfe4j;
 
-import balbucio.focusnfe4j.nfe.NfeRequest;
-import balbucio.focusnfe4j.nfe.NfeStatusResponse;
+import balbucio.focusnfe4j.nfe.model.NfeRequest;
+import balbucio.focusnfe4j.nfe.model.NfeStatusResponse;
 import balbucio.focusnfe4j.testutil.TestHttpServer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;

@@ -15,5 +15,25 @@ public class EmailRequest {
     public List<String> getEmails() {
         return emails;
     }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static class Builder {
+        private List<String> emails;
+
+        Builder() {
+        }
+
+        public Builder emails(List<String> emails) {
+            this.emails = emails;
+            return this;
+        }
+
+        public EmailRequest build() {
+            return new EmailRequest(emails);
+        }
+    }
 }
 

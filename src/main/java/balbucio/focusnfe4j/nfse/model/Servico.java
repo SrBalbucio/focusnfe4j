@@ -1,4 +1,4 @@
-package balbucio.focusnfe4j.nfse;
+package balbucio.focusnfe4j.nfse.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -367,5 +367,251 @@ public class Servico {
 
     public void setCbsValor(Double cbsValor) {
         this.cbsValor = cbsValor;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static class Builder {
+        private Double valorServicos;
+        private Double valorDeducoes;
+        private Double valorPis;
+        private Double valorCofins;
+        private Double valorInss;
+        private Double valorIr;
+        private Double valorCsll;
+        private Boolean issRetido;
+        private Double valorIss;
+        private Double valorIssRetido;
+        private Double outrasRetencoes;
+        private Double baseCalculo;
+        private Double aliquota;
+        private Double descontoIncondicionado;
+        private Double descontoCondicionado;
+        private String itemListaServico;
+        private String codigoCnae;
+        private String codigoTributarioMunicipio;
+        private String discriminacao;
+        private String codigoMunicipio;
+        private Double percentualTotalTributos;
+        private String fonteTotalTributos;
+        private String codigoNbs;
+        private String codigoIndicadorOperacao;
+        private String ibsCbsClassificacaoTributaria;
+        private String ibsCbsSituacaoTributaria;
+        private Double ibsCbsBaseCalculo;
+        private Double ibsUfAliquota;
+        private Double ibsMunAliquota;
+        private Double cbsAliquota;
+        private Double ibsUfValor;
+        private Double ibsMunValor;
+        private Double cbsValor;
+
+        Builder() {
+        }
+
+        public Builder valorServicos(Double valorServicos) {
+            this.valorServicos = valorServicos;
+            return this;
+        }
+
+        public Builder valorDeducoes(Double valorDeducoes) {
+            this.valorDeducoes = valorDeducoes;
+            return this;
+        }
+
+        public Builder valorPis(Double valorPis) {
+            this.valorPis = valorPis;
+            return this;
+        }
+
+        public Builder valorCofins(Double valorCofins) {
+            this.valorCofins = valorCofins;
+            return this;
+        }
+
+        public Builder valorInss(Double valorInss) {
+            this.valorInss = valorInss;
+            return this;
+        }
+
+        public Builder valorIr(Double valorIr) {
+            this.valorIr = valorIr;
+            return this;
+        }
+
+        public Builder valorCsll(Double valorCsll) {
+            this.valorCsll = valorCsll;
+            return this;
+        }
+
+        public Builder issRetido(Boolean issRetido) {
+            this.issRetido = issRetido;
+            return this;
+        }
+
+        public Builder valorIss(Double valorIss) {
+            this.valorIss = valorIss;
+            return this;
+        }
+
+        public Builder valorIssRetido(Double valorIssRetido) {
+            this.valorIssRetido = valorIssRetido;
+            return this;
+        }
+
+        public Builder outrasRetencoes(Double outrasRetencoes) {
+            this.outrasRetencoes = outrasRetencoes;
+            return this;
+        }
+
+        public Builder baseCalculo(Double baseCalculo) {
+            this.baseCalculo = baseCalculo;
+            return this;
+        }
+
+        public Builder aliquota(Double aliquota) {
+            this.aliquota = aliquota;
+            return this;
+        }
+
+        public Builder descontoIncondicionado(Double descontoIncondicionado) {
+            this.descontoIncondicionado = descontoIncondicionado;
+            return this;
+        }
+
+        public Builder descontoCondicionado(Double descontoCondicionado) {
+            this.descontoCondicionado = descontoCondicionado;
+            return this;
+        }
+
+        public Builder itemListaServico(String itemListaServico) {
+            this.itemListaServico = itemListaServico;
+            return this;
+        }
+
+        public Builder codigoCnae(String codigoCnae) {
+            this.codigoCnae = codigoCnae;
+            return this;
+        }
+
+        public Builder codigoTributarioMunicipio(String codigoTributarioMunicipio) {
+            this.codigoTributarioMunicipio = codigoTributarioMunicipio;
+            return this;
+        }
+
+        public Builder discriminacao(String discriminacao) {
+            this.discriminacao = discriminacao;
+            return this;
+        }
+
+        public Builder codigoMunicipio(String codigoMunicipio) {
+            this.codigoMunicipio = codigoMunicipio;
+            return this;
+        }
+
+        public Builder percentualTotalTributos(Double percentualTotalTributos) {
+            this.percentualTotalTributos = percentualTotalTributos;
+            return this;
+        }
+
+        public Builder fonteTotalTributos(String fonteTotalTributos) {
+            this.fonteTotalTributos = fonteTotalTributos;
+            return this;
+        }
+
+        public Builder codigoNbs(String codigoNbs) {
+            this.codigoNbs = codigoNbs;
+            return this;
+        }
+
+        public Builder codigoIndicadorOperacao(String codigoIndicadorOperacao) {
+            this.codigoIndicadorOperacao = codigoIndicadorOperacao;
+            return this;
+        }
+
+        public Builder ibsCbsClassificacaoTributaria(String ibsCbsClassificacaoTributaria) {
+            this.ibsCbsClassificacaoTributaria = ibsCbsClassificacaoTributaria;
+            return this;
+        }
+
+        public Builder ibsCbsSituacaoTributaria(String ibsCbsSituacaoTributaria) {
+            this.ibsCbsSituacaoTributaria = ibsCbsSituacaoTributaria;
+            return this;
+        }
+
+        public Builder ibsCbsBaseCalculo(Double ibsCbsBaseCalculo) {
+            this.ibsCbsBaseCalculo = ibsCbsBaseCalculo;
+            return this;
+        }
+
+        public Builder ibsUfAliquota(Double ibsUfAliquota) {
+            this.ibsUfAliquota = ibsUfAliquota;
+            return this;
+        }
+
+        public Builder ibsMunAliquota(Double ibsMunAliquota) {
+            this.ibsMunAliquota = ibsMunAliquota;
+            return this;
+        }
+
+        public Builder cbsAliquota(Double cbsAliquota) {
+            this.cbsAliquota = cbsAliquota;
+            return this;
+        }
+
+        public Builder ibsUfValor(Double ibsUfValor) {
+            this.ibsUfValor = ibsUfValor;
+            return this;
+        }
+
+        public Builder ibsMunValor(Double ibsMunValor) {
+            this.ibsMunValor = ibsMunValor;
+            return this;
+        }
+
+        public Builder cbsValor(Double cbsValor) {
+            this.cbsValor = cbsValor;
+            return this;
+        }
+
+        public Servico build() {
+            Servico servico = new Servico();
+            servico.valorServicos = this.valorServicos;
+            servico.valorDeducoes = this.valorDeducoes;
+            servico.valorPis = this.valorPis;
+            servico.valorCofins = this.valorCofins;
+            servico.valorInss = this.valorInss;
+            servico.valorIr = this.valorIr;
+            servico.valorCsll = this.valorCsll;
+            servico.issRetido = this.issRetido;
+            servico.valorIss = this.valorIss;
+            servico.valorIssRetido = this.valorIssRetido;
+            servico.outrasRetencoes = this.outrasRetencoes;
+            servico.baseCalculo = this.baseCalculo;
+            servico.aliquota = this.aliquota;
+            servico.descontoIncondicionado = this.descontoIncondicionado;
+            servico.descontoCondicionado = this.descontoCondicionado;
+            servico.itemListaServico = this.itemListaServico;
+            servico.codigoCnae = this.codigoCnae;
+            servico.codigoTributarioMunicipio = this.codigoTributarioMunicipio;
+            servico.discriminacao = this.discriminacao;
+            servico.codigoMunicipio = this.codigoMunicipio;
+            servico.percentualTotalTributos = this.percentualTotalTributos;
+            servico.fonteTotalTributos = this.fonteTotalTributos;
+            servico.codigoNbs = this.codigoNbs;
+            servico.codigoIndicadorOperacao = this.codigoIndicadorOperacao;
+            servico.ibsCbsClassificacaoTributaria = this.ibsCbsClassificacaoTributaria;
+            servico.ibsCbsSituacaoTributaria = this.ibsCbsSituacaoTributaria;
+            servico.ibsCbsBaseCalculo = this.ibsCbsBaseCalculo;
+            servico.ibsUfAliquota = this.ibsUfAliquota;
+            servico.ibsMunAliquota = this.ibsMunAliquota;
+            servico.cbsAliquota = this.cbsAliquota;
+            servico.ibsUfValor = this.ibsUfValor;
+            servico.ibsMunValor = this.ibsMunValor;
+            servico.cbsValor = this.cbsValor;
+            return servico;
+        }
     }
 }

@@ -1,4 +1,4 @@
-package balbucio.focusnfe4j.nfe;
+package balbucio.focusnfe4j.nfe.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -1249,5 +1249,811 @@ public class NfeRequest {
 
     public void setItems(List<NfeItem> items) {
         this.items = items;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static class Builder {
+        private String naturezaOperacao;
+        private Integer serie;
+        private Integer numero;
+        private String dataEmissao;
+        private String dataEntradaSaida;
+        private String dataPrevisaoEntregaBem;
+        private Integer tipoDocumento;
+        private Integer localDestino;
+        private Integer municipio;
+        private Integer ibsCbsMunicipio;
+        private Integer finalidadeEmissao;
+        private String tipoNotaDebito;
+        private String tipoNotaCredito;
+        private Integer consumidorFinal;
+        private Integer presencaComprador;
+        private Integer indicadorIntermediario;
+        private List<NotaReferenciada> notasReferenciadas;
+        private List<String> chavesNfeAntecipacaoPagamento;
+        private String cnpjEmitente;
+        private String cpfEmitente;
+        private String nomeEmitente;
+        private String nomeFantasiaEmitente;
+        private String logradouroEmitente;
+        private String numeroEmitente;
+        private String complementoEmitente;
+        private String bairroEmitente;
+        private Integer codigoMunicipioEmitente;
+        private String municipioEmitente;
+        private String ufEmitente;
+        private String cepEmitente;
+        private String telefoneEmitente;
+        private String inscricaoEstadualEmitente;
+        private String inscricaoEstadualStEmitente;
+        private String inscricaoMunicipalEmitente;
+        private Integer cnaeFiscalEmitente;
+        private Integer regimeTributarioEmitente;
+        private String cnpjDestinatario;
+        private String cpfDestinatario;
+        private String idEstrangeiroDestinatario;
+        private String nomeDestinatario;
+        private String logradouroDestinatario;
+        private String numeroDestinatario;
+        private String complementoDestinatario;
+        private String bairroDestinatario;
+        private Integer codigoMunicipioDestinatario;
+        private String municipioDestinatario;
+        private String ufDestinatario;
+        private String cepDestinatario;
+        private Integer codigoPaisDestinatario;
+        private String paisDestinatario;
+        private String telefoneDestinatario;
+        private Integer indicadorInscricaoEstadualDestinatario;
+        private String inscricaoEstadualDestinatario;
+        private String inscricaoSuframaDestinatario;
+        private String inscricaoMunicipalDestinatario;
+        private String emailDestinatario;
+        private String cnpjRetirada;
+        private String cpfRetirada;
+        private String nomeRetirada;
+        private String logradouroRetirada;
+        private String numeroRetirada;
+        private String complementoRetirada;
+        private String bairroRetirada;
+        private Integer codigoMunicipioRetirada;
+        private String municipioRetirada;
+        private String ufRetirada;
+        private String cepRetirada;
+        private Integer codigoPaisRetirada;
+        private String paisRetirada;
+        private String telefoneRetirada;
+        private String emailRetirada;
+        private String inscricaoEstadualRetirada;
+        private String cnpjEntrega;
+        private String cpfEntrega;
+        private String nomeEntrega;
+        private String logradouroEntrega;
+        private String numeroEntrega;
+        private String complementoEntrega;
+        private String bairroEntrega;
+        private Integer codigoMunicipioEntrega;
+        private String municipioEntrega;
+        private String ufEntrega;
+        private String cepEntrega;
+        private Integer codigoPaisEntrega;
+        private String paisEntrega;
+        private String telefoneEntrega;
+        private String emailEntrega;
+        private String inscricaoEstadualEntrega;
+        private List<PessoaAutorizada> pessoasAutorizadas;
+        private Double valorFrete;
+        private Double valorSeguro;
+        private Double valorDesconto;
+        private Double valorOutrasDespesas;
+        private Double valorTotal;
+        private Double valorProdutos;
+        private Integer modalidadeFrete;
+        private Double valorTotalTributos;
+        private Double icmsBaseCalculo;
+        private Double icmsValorTotal;
+        private Double icmsValorTotalDesonerado;
+        private Double fcpValorTotalUfDestino;
+        private Double icmsValorTotalUfDestino;
+        private Double icmsValorTotalUfRemetente;
+        private Double fcpValorTotal;
+        private Double icmsValorTotalSt;
+        private Double fcpValorTotalSt;
+        private String informacoesAdicionaisContribuinte;
+        private List<ObservacaoContribuinte> observacoesContribuinte;
+        private String informacoesComplementaresInteresseFisco;
+        private Integer tipoCompraGovernamental;
+        private Double percReducaoAliquotaCompraGovernamental;
+        private Integer tipoOperacaoGovernamental;
+        private List<NfeItem> items;
+
+        Builder() {
+        }
+
+        public Builder naturezaOperacao(String naturezaOperacao) {
+            this.naturezaOperacao = naturezaOperacao;
+            return this;
+        }
+
+        public Builder serie(Integer serie) {
+            this.serie = serie;
+            return this;
+        }
+
+        public Builder numero(Integer numero) {
+            this.numero = numero;
+            return this;
+        }
+
+        public Builder dataEmissao(String dataEmissao) {
+            this.dataEmissao = dataEmissao;
+            return this;
+        }
+
+        public Builder dataEntradaSaida(String dataEntradaSaida) {
+            this.dataEntradaSaida = dataEntradaSaida;
+            return this;
+        }
+
+        public Builder dataPrevisaoEntregaBem(String dataPrevisaoEntregaBem) {
+            this.dataPrevisaoEntregaBem = dataPrevisaoEntregaBem;
+            return this;
+        }
+
+        public Builder tipoDocumento(Integer tipoDocumento) {
+            this.tipoDocumento = tipoDocumento;
+            return this;
+        }
+
+        public Builder localDestino(Integer localDestino) {
+            this.localDestino = localDestino;
+            return this;
+        }
+
+        public Builder municipio(Integer municipio) {
+            this.municipio = municipio;
+            return this;
+        }
+
+        public Builder ibsCbsMunicipio(Integer ibsCbsMunicipio) {
+            this.ibsCbsMunicipio = ibsCbsMunicipio;
+            return this;
+        }
+
+        public Builder finalidadeEmissao(Integer finalidadeEmissao) {
+            this.finalidadeEmissao = finalidadeEmissao;
+            return this;
+        }
+
+        public Builder tipoNotaDebito(String tipoNotaDebito) {
+            this.tipoNotaDebito = tipoNotaDebito;
+            return this;
+        }
+
+        public Builder tipoNotaCredito(String tipoNotaCredito) {
+            this.tipoNotaCredito = tipoNotaCredito;
+            return this;
+        }
+
+        public Builder consumidorFinal(Integer consumidorFinal) {
+            this.consumidorFinal = consumidorFinal;
+            return this;
+        }
+
+        public Builder presencaComprador(Integer presencaComprador) {
+            this.presencaComprador = presencaComprador;
+            return this;
+        }
+
+        public Builder indicadorIntermediario(Integer indicadorIntermediario) {
+            this.indicadorIntermediario = indicadorIntermediario;
+            return this;
+        }
+
+        public Builder notasReferenciadas(List<NotaReferenciada> notasReferenciadas) {
+            this.notasReferenciadas = notasReferenciadas;
+            return this;
+        }
+
+        public Builder chavesNfeAntecipacaoPagamento(List<String> chavesNfeAntecipacaoPagamento) {
+            this.chavesNfeAntecipacaoPagamento = chavesNfeAntecipacaoPagamento;
+            return this;
+        }
+
+        public Builder cnpjEmitente(String cnpjEmitente) {
+            this.cnpjEmitente = cnpjEmitente;
+            return this;
+        }
+
+        public Builder cpfEmitente(String cpfEmitente) {
+            this.cpfEmitente = cpfEmitente;
+            return this;
+        }
+
+        public Builder nomeEmitente(String nomeEmitente) {
+            this.nomeEmitente = nomeEmitente;
+            return this;
+        }
+
+        public Builder nomeFantasiaEmitente(String nomeFantasiaEmitente) {
+            this.nomeFantasiaEmitente = nomeFantasiaEmitente;
+            return this;
+        }
+
+        public Builder logradouroEmitente(String logradouroEmitente) {
+            this.logradouroEmitente = logradouroEmitente;
+            return this;
+        }
+
+        public Builder numeroEmitente(String numeroEmitente) {
+            this.numeroEmitente = numeroEmitente;
+            return this;
+        }
+
+        public Builder complementoEmitente(String complementoEmitente) {
+            this.complementoEmitente = complementoEmitente;
+            return this;
+        }
+
+        public Builder bairroEmitente(String bairroEmitente) {
+            this.bairroEmitente = bairroEmitente;
+            return this;
+        }
+
+        public Builder codigoMunicipioEmitente(Integer codigoMunicipioEmitente) {
+            this.codigoMunicipioEmitente = codigoMunicipioEmitente;
+            return this;
+        }
+
+        public Builder municipioEmitente(String municipioEmitente) {
+            this.municipioEmitente = municipioEmitente;
+            return this;
+        }
+
+        public Builder ufEmitente(String ufEmitente) {
+            this.ufEmitente = ufEmitente;
+            return this;
+        }
+
+        public Builder cepEmitente(String cepEmitente) {
+            this.cepEmitente = cepEmitente;
+            return this;
+        }
+
+        public Builder telefoneEmitente(String telefoneEmitente) {
+            this.telefoneEmitente = telefoneEmitente;
+            return this;
+        }
+
+        public Builder inscricaoEstadualEmitente(String inscricaoEstadualEmitente) {
+            this.inscricaoEstadualEmitente = inscricaoEstadualEmitente;
+            return this;
+        }
+
+        public Builder inscricaoEstadualStEmitente(String inscricaoEstadualStEmitente) {
+            this.inscricaoEstadualStEmitente = inscricaoEstadualStEmitente;
+            return this;
+        }
+
+        public Builder inscricaoMunicipalEmitente(String inscricaoMunicipalEmitente) {
+            this.inscricaoMunicipalEmitente = inscricaoMunicipalEmitente;
+            return this;
+        }
+
+        public Builder cnaeFiscalEmitente(Integer cnaeFiscalEmitente) {
+            this.cnaeFiscalEmitente = cnaeFiscalEmitente;
+            return this;
+        }
+
+        public Builder regimeTributarioEmitente(Integer regimeTributarioEmitente) {
+            this.regimeTributarioEmitente = regimeTributarioEmitente;
+            return this;
+        }
+
+        public Builder cnpjDestinatario(String cnpjDestinatario) {
+            this.cnpjDestinatario = cnpjDestinatario;
+            return this;
+        }
+
+        public Builder cpfDestinatario(String cpfDestinatario) {
+            this.cpfDestinatario = cpfDestinatario;
+            return this;
+        }
+
+        public Builder idEstrangeiroDestinatario(String idEstrangeiroDestinatario) {
+            this.idEstrangeiroDestinatario = idEstrangeiroDestinatario;
+            return this;
+        }
+
+        public Builder nomeDestinatario(String nomeDestinatario) {
+            this.nomeDestinatario = nomeDestinatario;
+            return this;
+        }
+
+        public Builder logradouroDestinatario(String logradouroDestinatario) {
+            this.logradouroDestinatario = logradouroDestinatario;
+            return this;
+        }
+
+        public Builder numeroDestinatario(String numeroDestinatario) {
+            this.numeroDestinatario = numeroDestinatario;
+            return this;
+        }
+
+        public Builder complementoDestinatario(String complementoDestinatario) {
+            this.complementoDestinatario = complementoDestinatario;
+            return this;
+        }
+
+        public Builder bairroDestinatario(String bairroDestinatario) {
+            this.bairroDestinatario = bairroDestinatario;
+            return this;
+        }
+
+        public Builder codigoMunicipioDestinatario(Integer codigoMunicipioDestinatario) {
+            this.codigoMunicipioDestinatario = codigoMunicipioDestinatario;
+            return this;
+        }
+
+        public Builder municipioDestinatario(String municipioDestinatario) {
+            this.municipioDestinatario = municipioDestinatario;
+            return this;
+        }
+
+        public Builder ufDestinatario(String ufDestinatario) {
+            this.ufDestinatario = ufDestinatario;
+            return this;
+        }
+
+        public Builder cepDestinatario(String cepDestinatario) {
+            this.cepDestinatario = cepDestinatario;
+            return this;
+        }
+
+        public Builder codigoPaisDestinatario(Integer codigoPaisDestinatario) {
+            this.codigoPaisDestinatario = codigoPaisDestinatario;
+            return this;
+        }
+
+        public Builder paisDestinatario(String paisDestinatario) {
+            this.paisDestinatario = paisDestinatario;
+            return this;
+        }
+
+        public Builder telefoneDestinatario(String telefoneDestinatario) {
+            this.telefoneDestinatario = telefoneDestinatario;
+            return this;
+        }
+
+        public Builder indicadorInscricaoEstadualDestinatario(Integer indicadorInscricaoEstadualDestinatario) {
+            this.indicadorInscricaoEstadualDestinatario = indicadorInscricaoEstadualDestinatario;
+            return this;
+        }
+
+        public Builder inscricaoEstadualDestinatario(String inscricaoEstadualDestinatario) {
+            this.inscricaoEstadualDestinatario = inscricaoEstadualDestinatario;
+            return this;
+        }
+
+        public Builder inscricaoSuframaDestinatario(String inscricaoSuframaDestinatario) {
+            this.inscricaoSuframaDestinatario = inscricaoSuframaDestinatario;
+            return this;
+        }
+
+        public Builder inscricaoMunicipalDestinatario(String inscricaoMunicipalDestinatario) {
+            this.inscricaoMunicipalDestinatario = inscricaoMunicipalDestinatario;
+            return this;
+        }
+
+        public Builder emailDestinatario(String emailDestinatario) {
+            this.emailDestinatario = emailDestinatario;
+            return this;
+        }
+
+        public Builder cnpjRetirada(String cnpjRetirada) {
+            this.cnpjRetirada = cnpjRetirada;
+            return this;
+        }
+
+        public Builder cpfRetirada(String cpfRetirada) {
+            this.cpfRetirada = cpfRetirada;
+            return this;
+        }
+
+        public Builder nomeRetirada(String nomeRetirada) {
+            this.nomeRetirada = nomeRetirada;
+            return this;
+        }
+
+        public Builder logradouroRetirada(String logradouroRetirada) {
+            this.logradouroRetirada = logradouroRetirada;
+            return this;
+        }
+
+        public Builder numeroRetirada(String numeroRetirada) {
+            this.numeroRetirada = numeroRetirada;
+            return this;
+        }
+
+        public Builder complementoRetirada(String complementoRetirada) {
+            this.complementoRetirada = complementoRetirada;
+            return this;
+        }
+
+        public Builder bairroRetirada(String bairroRetirada) {
+            this.bairroRetirada = bairroRetirada;
+            return this;
+        }
+
+        public Builder codigoMunicipioRetirada(Integer codigoMunicipioRetirada) {
+            this.codigoMunicipioRetirada = codigoMunicipioRetirada;
+            return this;
+        }
+
+        public Builder municipioRetirada(String municipioRetirada) {
+            this.municipioRetirada = municipioRetirada;
+            return this;
+        }
+
+        public Builder ufRetirada(String ufRetirada) {
+            this.ufRetirada = ufRetirada;
+            return this;
+        }
+
+        public Builder cepRetirada(String cepRetirada) {
+            this.cepRetirada = cepRetirada;
+            return this;
+        }
+
+        public Builder codigoPaisRetirada(Integer codigoPaisRetirada) {
+            this.codigoPaisRetirada = codigoPaisRetirada;
+            return this;
+        }
+
+        public Builder paisRetirada(String paisRetirada) {
+            this.paisRetirada = paisRetirada;
+            return this;
+        }
+
+        public Builder telefoneRetirada(String telefoneRetirada) {
+            this.telefoneRetirada = telefoneRetirada;
+            return this;
+        }
+
+        public Builder emailRetirada(String emailRetirada) {
+            this.emailRetirada = emailRetirada;
+            return this;
+        }
+
+        public Builder inscricaoEstadualRetirada(String inscricaoEstadualRetirada) {
+            this.inscricaoEstadualRetirada = inscricaoEstadualRetirada;
+            return this;
+        }
+
+        public Builder cnpjEntrega(String cnpjEntrega) {
+            this.cnpjEntrega = cnpjEntrega;
+            return this;
+        }
+
+        public Builder cpfEntrega(String cpfEntrega) {
+            this.cpfEntrega = cpfEntrega;
+            return this;
+        }
+
+        public Builder nomeEntrega(String nomeEntrega) {
+            this.nomeEntrega = nomeEntrega;
+            return this;
+        }
+
+        public Builder logradouroEntrega(String logradouroEntrega) {
+            this.logradouroEntrega = logradouroEntrega;
+            return this;
+        }
+
+        public Builder numeroEntrega(String numeroEntrega) {
+            this.numeroEntrega = numeroEntrega;
+            return this;
+        }
+
+        public Builder complementoEntrega(String complementoEntrega) {
+            this.complementoEntrega = complementoEntrega;
+            return this;
+        }
+
+        public Builder bairroEntrega(String bairroEntrega) {
+            this.bairroEntrega = bairroEntrega;
+            return this;
+        }
+
+        public Builder codigoMunicipioEntrega(Integer codigoMunicipioEntrega) {
+            this.codigoMunicipioEntrega = codigoMunicipioEntrega;
+            return this;
+        }
+
+        public Builder municipioEntrega(String municipioEntrega) {
+            this.municipioEntrega = municipioEntrega;
+            return this;
+        }
+
+        public Builder ufEntrega(String ufEntrega) {
+            this.ufEntrega = ufEntrega;
+            return this;
+        }
+
+        public Builder cepEntrega(String cepEntrega) {
+            this.cepEntrega = cepEntrega;
+            return this;
+        }
+
+        public Builder codigoPaisEntrega(Integer codigoPaisEntrega) {
+            this.codigoPaisEntrega = codigoPaisEntrega;
+            return this;
+        }
+
+        public Builder paisEntrega(String paisEntrega) {
+            this.paisEntrega = paisEntrega;
+            return this;
+        }
+
+        public Builder telefoneEntrega(String telefoneEntrega) {
+            this.telefoneEntrega = telefoneEntrega;
+            return this;
+        }
+
+        public Builder emailEntrega(String emailEntrega) {
+            this.emailEntrega = emailEntrega;
+            return this;
+        }
+
+        public Builder inscricaoEstadualEntrega(String inscricaoEstadualEntrega) {
+            this.inscricaoEstadualEntrega = inscricaoEstadualEntrega;
+            return this;
+        }
+
+        public Builder pessoasAutorizadas(List<PessoaAutorizada> pessoasAutorizadas) {
+            this.pessoasAutorizadas = pessoasAutorizadas;
+            return this;
+        }
+
+        public Builder valorFrete(Double valorFrete) {
+            this.valorFrete = valorFrete;
+            return this;
+        }
+
+        public Builder valorSeguro(Double valorSeguro) {
+            this.valorSeguro = valorSeguro;
+            return this;
+        }
+
+        public Builder valorDesconto(Double valorDesconto) {
+            this.valorDesconto = valorDesconto;
+            return this;
+        }
+
+        public Builder valorOutrasDespesas(Double valorOutrasDespesas) {
+            this.valorOutrasDespesas = valorOutrasDespesas;
+            return this;
+        }
+
+        public Builder valorTotal(Double valorTotal) {
+            this.valorTotal = valorTotal;
+            return this;
+        }
+
+        public Builder valorProdutos(Double valorProdutos) {
+            this.valorProdutos = valorProdutos;
+            return this;
+        }
+
+        public Builder modalidadeFrete(Integer modalidadeFrete) {
+            this.modalidadeFrete = modalidadeFrete;
+            return this;
+        }
+
+        public Builder valorTotalTributos(Double valorTotalTributos) {
+            this.valorTotalTributos = valorTotalTributos;
+            return this;
+        }
+
+        public Builder icmsBaseCalculo(Double icmsBaseCalculo) {
+            this.icmsBaseCalculo = icmsBaseCalculo;
+            return this;
+        }
+
+        public Builder icmsValorTotal(Double icmsValorTotal) {
+            this.icmsValorTotal = icmsValorTotal;
+            return this;
+        }
+
+        public Builder icmsValorTotalDesonerado(Double icmsValorTotalDesonerado) {
+            this.icmsValorTotalDesonerado = icmsValorTotalDesonerado;
+            return this;
+        }
+
+        public Builder fcpValorTotalUfDestino(Double fcpValorTotalUfDestino) {
+            this.fcpValorTotalUfDestino = fcpValorTotalUfDestino;
+            return this;
+        }
+
+        public Builder icmsValorTotalUfDestino(Double icmsValorTotalUfDestino) {
+            this.icmsValorTotalUfDestino = icmsValorTotalUfDestino;
+            return this;
+        }
+
+        public Builder icmsValorTotalUfRemetente(Double icmsValorTotalUfRemetente) {
+            this.icmsValorTotalUfRemetente = icmsValorTotalUfRemetente;
+            return this;
+        }
+
+        public Builder fcpValorTotal(Double fcpValorTotal) {
+            this.fcpValorTotal = fcpValorTotal;
+            return this;
+        }
+
+        public Builder icmsValorTotalSt(Double icmsValorTotalSt) {
+            this.icmsValorTotalSt = icmsValorTotalSt;
+            return this;
+        }
+
+        public Builder fcpValorTotalSt(Double fcpValorTotalSt) {
+            this.fcpValorTotalSt = fcpValorTotalSt;
+            return this;
+        }
+
+        public Builder informacoesAdicionaisContribuinte(String informacoesAdicionaisContribuinte) {
+            this.informacoesAdicionaisContribuinte = informacoesAdicionaisContribuinte;
+            return this;
+        }
+
+        public Builder observacoesContribuinte(List<ObservacaoContribuinte> observacoesContribuinte) {
+            this.observacoesContribuinte = observacoesContribuinte;
+            return this;
+        }
+
+        public Builder informacoesComplementaresInteresseFisco(String informacoesComplementaresInteresseFisco) {
+            this.informacoesComplementaresInteresseFisco = informacoesComplementaresInteresseFisco;
+            return this;
+        }
+
+        public Builder tipoCompraGovernamental(Integer tipoCompraGovernamental) {
+            this.tipoCompraGovernamental = tipoCompraGovernamental;
+            return this;
+        }
+
+        public Builder percReducaoAliquotaCompraGovernamental(Double percReducaoAliquotaCompraGovernamental) {
+            this.percReducaoAliquotaCompraGovernamental = percReducaoAliquotaCompraGovernamental;
+            return this;
+        }
+
+        public Builder tipoOperacaoGovernamental(Integer tipoOperacaoGovernamental) {
+            this.tipoOperacaoGovernamental = tipoOperacaoGovernamental;
+            return this;
+        }
+
+        public Builder items(List<NfeItem> items) {
+            this.items = items;
+            return this;
+        }
+
+        public NfeRequest build() {
+            NfeRequest request = new NfeRequest();
+            request.naturezaOperacao = this.naturezaOperacao;
+            request.serie = this.serie;
+            request.numero = this.numero;
+            request.dataEmissao = this.dataEmissao;
+            request.dataEntradaSaida = this.dataEntradaSaida;
+            request.dataPrevisaoEntregaBem = this.dataPrevisaoEntregaBem;
+            request.tipoDocumento = this.tipoDocumento;
+            request.localDestino = this.localDestino;
+            request.municipio = this.municipio;
+            request.ibsCbsMunicipio = this.ibsCbsMunicipio;
+            request.finalidadeEmissao = this.finalidadeEmissao;
+            request.tipoNotaDebito = this.tipoNotaDebito;
+            request.tipoNotaCredito = this.tipoNotaCredito;
+            request.consumidorFinal = this.consumidorFinal;
+            request.presencaComprador = this.presencaComprador;
+            request.indicadorIntermediario = this.indicadorIntermediario;
+            request.notasReferenciadas = this.notasReferenciadas;
+            request.chavesNfeAntecipacaoPagamento = this.chavesNfeAntecipacaoPagamento;
+            request.cnpjEmitente = this.cnpjEmitente;
+            request.cpfEmitente = this.cpfEmitente;
+            request.nomeEmitente = this.nomeEmitente;
+            request.nomeFantasiaEmitente = this.nomeFantasiaEmitente;
+            request.logradouroEmitente = this.logradouroEmitente;
+            request.numeroEmitente = this.numeroEmitente;
+            request.complementoEmitente = this.complementoEmitente;
+            request.bairroEmitente = this.bairroEmitente;
+            request.codigoMunicipioEmitente = this.codigoMunicipioEmitente;
+            request.municipioEmitente = this.municipioEmitente;
+            request.ufEmitente = this.ufEmitente;
+            request.cepEmitente = this.cepEmitente;
+            request.telefoneEmitente = this.telefoneEmitente;
+            request.inscricaoEstadualEmitente = this.inscricaoEstadualEmitente;
+            request.inscricaoEstadualStEmitente = this.inscricaoEstadualStEmitente;
+            request.inscricaoMunicipalEmitente = this.inscricaoMunicipalEmitente;
+            request.cnaeFiscalEmitente = this.cnaeFiscalEmitente;
+            request.regimeTributarioEmitente = this.regimeTributarioEmitente;
+            request.cnpjDestinatario = this.cnpjDestinatario;
+            request.cpfDestinatario = this.cpfDestinatario;
+            request.idEstrangeiroDestinatario = this.idEstrangeiroDestinatario;
+            request.nomeDestinatario = this.nomeDestinatario;
+            request.logradouroDestinatario = this.logradouroDestinatario;
+            request.numeroDestinatario = this.numeroDestinatario;
+            request.complementoDestinatario = this.complementoDestinatario;
+            request.bairroDestinatario = this.bairroDestinatario;
+            request.codigoMunicipioDestinatario = this.codigoMunicipioDestinatario;
+            request.municipioDestinatario = this.municipioDestinatario;
+            request.ufDestinatario = this.ufDestinatario;
+            request.cepDestinatario = this.cepDestinatario;
+            request.codigoPaisDestinatario = this.codigoPaisDestinatario;
+            request.paisDestinatario = this.paisDestinatario;
+            request.telefoneDestinatario = this.telefoneDestinatario;
+            request.indicadorInscricaoEstadualDestinatario = this.indicadorInscricaoEstadualDestinatario;
+            request.inscricaoEstadualDestinatario = this.inscricaoEstadualDestinatario;
+            request.inscricaoSuframaDestinatario = this.inscricaoSuframaDestinatario;
+            request.inscricaoMunicipalDestinatario = this.inscricaoMunicipalDestinatario;
+            request.emailDestinatario = this.emailDestinatario;
+            request.cnpjRetirada = this.cnpjRetirada;
+            request.cpfRetirada = this.cpfRetirada;
+            request.nomeRetirada = this.nomeRetirada;
+            request.logradouroRetirada = this.logradouroRetirada;
+            request.numeroRetirada = this.numeroRetirada;
+            request.complementoRetirada = this.complementoRetirada;
+            request.bairroRetirada = this.bairroRetirada;
+            request.codigoMunicipioRetirada = this.codigoMunicipioRetirada;
+            request.municipioRetirada = this.municipioRetirada;
+            request.ufRetirada = this.ufRetirada;
+            request.cepRetirada = this.cepRetirada;
+            request.codigoPaisRetirada = this.codigoPaisRetirada;
+            request.paisRetirada = this.paisRetirada;
+            request.telefoneRetirada = this.telefoneRetirada;
+            request.emailRetirada = this.emailRetirada;
+            request.inscricaoEstadualRetirada = this.inscricaoEstadualRetirada;
+            request.cnpjEntrega = this.cnpjEntrega;
+            request.cpfEntrega = this.cpfEntrega;
+            request.nomeEntrega = this.nomeEntrega;
+            request.logradouroEntrega = this.logradouroEntrega;
+            request.numeroEntrega = this.numeroEntrega;
+            request.complementoEntrega = this.complementoEntrega;
+            request.bairroEntrega = this.bairroEntrega;
+            request.codigoMunicipioEntrega = this.codigoMunicipioEntrega;
+            request.municipioEntrega = this.municipioEntrega;
+            request.ufEntrega = this.ufEntrega;
+            request.cepEntrega = this.cepEntrega;
+            request.codigoPaisEntrega = this.codigoPaisEntrega;
+            request.paisEntrega = this.paisEntrega;
+            request.telefoneEntrega = this.telefoneEntrega;
+            request.emailEntrega = this.emailEntrega;
+            request.inscricaoEstadualEntrega = this.inscricaoEstadualEntrega;
+            request.pessoasAutorizadas = this.pessoasAutorizadas;
+            request.valorFrete = this.valorFrete;
+            request.valorSeguro = this.valorSeguro;
+            request.valorDesconto = this.valorDesconto;
+            request.valorOutrasDespesas = this.valorOutrasDespesas;
+            request.valorTotal = this.valorTotal;
+            request.valorProdutos = this.valorProdutos;
+            request.modalidadeFrete = this.modalidadeFrete;
+            request.valorTotalTributos = this.valorTotalTributos;
+            request.icmsBaseCalculo = this.icmsBaseCalculo;
+            request.icmsValorTotal = this.icmsValorTotal;
+            request.icmsValorTotalDesonerado = this.icmsValorTotalDesonerado;
+            request.fcpValorTotalUfDestino = this.fcpValorTotalUfDestino;
+            request.icmsValorTotalUfDestino = this.icmsValorTotalUfDestino;
+            request.icmsValorTotalUfRemetente = this.icmsValorTotalUfRemetente;
+            request.fcpValorTotal = this.fcpValorTotal;
+            request.icmsValorTotalSt = this.icmsValorTotalSt;
+            request.fcpValorTotalSt = this.fcpValorTotalSt;
+            request.informacoesAdicionaisContribuinte = this.informacoesAdicionaisContribuinte;
+            request.observacoesContribuinte = this.observacoesContribuinte;
+            request.informacoesComplementaresInteresseFisco = this.informacoesComplementaresInteresseFisco;
+            request.tipoCompraGovernamental = this.tipoCompraGovernamental;
+            request.percReducaoAliquotaCompraGovernamental = this.percReducaoAliquotaCompraGovernamental;
+            request.tipoOperacaoGovernamental = this.tipoOperacaoGovernamental;
+            request.items = this.items;
+            return request;
+        }
     }
 }
