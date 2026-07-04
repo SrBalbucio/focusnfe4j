@@ -4,6 +4,8 @@ import balbucio.focusnfe4j.http.FocusNfeJson;
 import balbucio.focusnfe4j.http.FocusNfeTransport;
 import balbucio.focusnfe4j.http.JdkHttpTransport;
 import balbucio.focusnfe4j.model.FocusNfeError;
+import balbucio.focusnfe4j.cep.CepService;
+import balbucio.focusnfe4j.cnpj.CnpjService;
 import balbucio.focusnfe4j.nfe.NfeService;
 import balbucio.focusnfe4j.nfse.NfseService;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -29,6 +31,7 @@ import java.util.Objects;
  * <p>Extensibility: service classes for each "categoria" can share this transport layer.</p>
  */
 public final class FocusNfeClient {
+    
     private final URI baseUri;
     private final String token;
     private final Duration requestTimeout;
@@ -39,6 +42,8 @@ public final class FocusNfeClient {
     private final NfeService nfeService;
     private final NfseService nfseService;
     private final balbucio.focusnfe4j.gestao.GestaoService gestaoService;
+    private final CepService cepService;
+    private final CnpjService cnpjService;
 
     private FocusNfeClient(Builder b) {
         this.baseUri = Objects.requireNonNull(b.baseUri, "baseUri");
@@ -55,6 +60,8 @@ public final class FocusNfeClient {
         this.nfeService = new NfeService(this);
         this.nfseService = new NfseService(this);
         this.gestaoService = new balbucio.focusnfe4j.gestao.GestaoService(this);
+        this.cepService = new CepService(this);
+        this.cnpjService = new CnpjService(this);
     }
 
     public static Builder builder() {
@@ -71,6 +78,14 @@ public final class FocusNfeClient {
 
     public balbucio.focusnfe4j.gestao.GestaoService gestao() {
         return gestaoService;
+    }
+
+    public CepService cep() {
+        return cepService;
+    }
+
+    public CnpjService cnpj() {
+        return cnpjService;
     }
 
     public URI getBaseUri() {
